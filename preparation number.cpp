@@ -15,8 +15,10 @@ return i;
 }
 
 bool only_numbers(string num){
-for (long long i = 0; num[i] != '\0'; i++)
-    if (num[i] < '0' || num[i] > '9' && num[i] != '-' && num[i] != '+' && num[i] != '*')
+int i = 0;
+while(num[i] != '\0')
+    if ((num[i] < '0' || num[i] > '9') && num[i] != '-' && num[i] != '+' && num[i] != '*')
         return false;
+    i++;
 return true;
 }
