@@ -7,7 +7,7 @@ string max_num1(string num1, atring num2){
         return num1;
     return num2;
 
-string max_num1(string num1, atring num2){
+string min_num1(string num1, atring num2){
     if(len(num1) > len(num2)){
         return num2;
     if(char_number(num1[0]) > char_number(num2[0]))
@@ -30,19 +30,4 @@ while (start <= end_){
 return str1;
 }
 
-string chose(string num1, string num2, string znac){
-    string itog = "";
-    if ((num1[0] == '-' && num2[0] == '-' && znac == "-") || (num1[0] == '-' && num2[0] == '+' && znac == "+"))
-        itog = difference(num1, num2);
-    else if ((num1[0] == '-' && num2[0] != '-' && znac == "-") || (num1[0] == '-' && num2[0] == '-' && znac == "+"))
-        itog = "-" + (sum(num1, num2));
-    else if ((num1[0] != '-' && num2[0] == '-' && znac == "-") || (num1[0] != '-' && num2[0] != '-' && znac == "+"))
-        itog = sum(num1, num2);
-    else if ((num1[0] != '-' && num2[0] == '-' && znac == "+") || (num1[0] != '-' && num2[0]!= '-' && znac == "-"))
-        itog = difference(num1, num2);
-    else if ((num1[0] == '-' && num2[0] == '-' && znac == "*") || (num1[0] != '-' && num2[0]!= '-' && znac == "*"))
-        itog = multiplication(num1, num2);
-    else if ((num1[0] != '-' && num2[0] == '-' && znac == "*") || (num1[0] == '-' && num2[0] != '-' && znac == "*"))
-        itog = "-" + multiplication(num1, num2);
-return itog;
-}
+
